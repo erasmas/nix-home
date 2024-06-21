@@ -13,16 +13,16 @@
   # changes in each release.
 
   # https://nix-community.github.io/home-manager/options.html#opt-home.stateVersion
-  home.stateVersion = "23.11";
+  home.stateVersion = "24.05";
 
   # Let Home Manager install and manage itself.
   # https://nix-community.github.io/home-manager/options.html#opt-programs.home-manager.enable
   programs.home-manager.enable = true;
 
   imports = [
-    ./assets.nix # Symlinked assets configurations
+    # ./assets.nix # Symlinked assets configurations
     ./packages.nix # Packages that are not included in `nix-darwin` and `home-manager`
-    ./shells.nix # Shell configurations
-    ./git.nix # Git configurations
+    # ./shells.nix # Shell configurations
+    # ./git.nix # Git configurations
   ];
 }

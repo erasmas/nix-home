@@ -4,8 +4,6 @@
   # Environment variables to always set at login.
   # https://nix-community.github.io/home-manager/options.html#opt-home.sessionVariables
   home.sessionVariables = {
-    VOLTA_HOME = "$HOME/.volta";
-    PNPM_HOME = "$HOME/.pnpm-global/bin";
   };
 
   # Extra directories to add to $PATH
@@ -17,13 +15,7 @@
     # Therefore, I'm adding it manually
     # https://nix-community.github.io/home-manager/index.xhtml#sec-flakes-nix-darwin-module
     # FIXME: Remove this once the issue is fixed
-    "/etc/profiles/per-user/zain/bin"
-
-    # Volta
-    "$VOLTA_HOME/bin"
-
-    # pnpm
-    "$HOME/.pnpm-global/bin"
+    # "/etc/profiles/per-user/kobza/bin"
   ];
 
   # The set of packages to appear in the user environment
@@ -46,12 +38,11 @@
     ##################################
     # Languages
     ##################################
-    rustc
-    cargo
 
     ##################################
     # Utilities
     ##################################
+    neovim
     jq # JSON in shell
   ];
 }

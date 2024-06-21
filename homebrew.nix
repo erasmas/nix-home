@@ -15,22 +15,12 @@
     "homebrew/cask-fonts"
     "homebrew/cask-versions"
     "homebrew/services"
-    "oven-sh/bun"
   ];
 
   # List of Homebrew formulae to install.
   # https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.brews
-  homebrew.brews = [
-    "awscli"
-    "bun"
-    "colima"
-    "deno"
-    "gh"
-    "graphviz"
-    "mkcert"
-    "volta"
-    "yadm"
-  ];
+  # homebrew.brews = [
+  # ];
 
   # Prefer installing application from the Mac App Store
   #
@@ -44,25 +34,13 @@
   # List of Homebrew casks to install.
   # https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.casks
   homebrew.casks = [
-    "actual"
+    "1password"
     "arc"
-    "around"
-    "daisydisk"
-    "discord"
-    "docker"
-    "gitkraken"
-    "gpg-suite-no-mail"
-    "karabiner-elements"
-    "microsoft-edge"
-    "notion"
-    "notion-calendar"
-    "obsidian"
+    "bambu-studio"
     "raycast"
-    "rectangle"
-    "spotify"
-    "visual-studio-code"
-    "warp"
-    "zed"
+    "slack"
+    "wezterm"
     "zoom"
+    "signal"
   ];
 }
