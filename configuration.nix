@@ -3,7 +3,7 @@
   # Make sure the nix daemon always runs
   # Without this configuration, the switch command won't work due to this error:
   # error: The daemon is not enabled but this is a multi-user install, aborting activation
-  nix.useDaemon = true;
+  services.nix-daemon.enable = true;
 
   # Configure extra options: https://nix-community.github.io/home-manager/options.html#opt-nix.extraOptions
   # `auto-optimise-store` | Storage optimization: https://nixos.wiki/wiki/Storage_optimization
@@ -36,5 +36,11 @@
   # https://github.com/nix-community/home-manager/issues/4026#issuecomment-1565974702
   # https://daiderd.com/nix-darwin/manual/index.html#opt-users.users._name_.home
   users.users.kobza.home = "/Users/kobza";
+
+  fonts.packages = with pkgs; [ 
+    # https://nixos.wiki/wiki/Fonts    
+    # Include selected fonts from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
+    (nerdfonts.override { fonts = [ "Iosevka" "JetBrainsMono" ]; })
+  ];
 
 }

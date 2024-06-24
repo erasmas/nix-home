@@ -1,5 +1,5 @@
 {
-  description = "Pejuang Kode flake";
+  description = "nix-darwin configuration";
 
   inputs = {
     # Package sets

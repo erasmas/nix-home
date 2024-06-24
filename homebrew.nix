@@ -11,12 +11,6 @@
   # https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.global.brewfile
   homebrew.global.brewfile = true;
 
-  homebrew.taps = [
-    "homebrew/cask-fonts"
-    "homebrew/cask-versions"
-    "homebrew/services"
-  ];
-
   # List of Homebrew formulae to install.
   # https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.brews
   # homebrew.brews = [
@@ -37,6 +31,7 @@
     "1password"
     "arc"
     "bambu-studio"
+    "karabiner-elements"
     "raycast"
     "slack"
     "wezterm"

@@ -6,12 +6,27 @@ let
   # Local nixpkgs working directory
   # FIXME: Find a way to access the home directory without hardcoding it
   # Because we will need it once we want to serve WSL system
-  nixConfigDirectory = "/Users/zain/Code/GitHub/zainfathoni/nix-home";
+  nixConfigDirectory = "/Users/kobza/Dev/nix-home/assets/config";
 in
 {
-  # Symlink scripts directory altogether
-  home.file."scripts".source = mkOutOfStoreSymlink "${nixConfigDirectory}/assets/scripts";
 
-  # Symlink Warp workflows
-  home.file.".warp".source = mkOutOfStoreSymlink "${nixConfigDirectory}/assets/.warp";
+  xdg.configFile."nvim" = {
+    source = "${nixConfigDirectory}/nvim";
+    recursive = true;
+  };
+
+  xdg.configFile."fish" = {
+    source = "${nixConfigDirectory}/fish";
+    recursive = true;
+  };
+
+  xdg.configFile."wezterm" = {
+    source = "${nixConfigDirectory}/wezterm";
+    recursive = true;
+  };
+
+  xdg.configFile."karabiner" = {
+    source = "${nixConfigDirectory}/karabiner";
+    recursive = true;
+  };
 }
