@@ -37,5 +37,6 @@
     "wezterm"
     "zoom"
     "signal"
+    "spotify"
   ];
 }
