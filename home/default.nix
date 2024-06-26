@@ -21,7 +21,13 @@
 
   programs.fish = {
     enable = true;
+
     shellInit = builtins.readFile ../assets/config/fish/init.fish;
+
+    functions = {
+      songwhip = builtins.readFile ../assets/config/fish/functions/songwhip.fish;
+    };
+
     plugins = [
       {
         name = "fzf.fish";
