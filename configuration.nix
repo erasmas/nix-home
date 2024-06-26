@@ -37,6 +37,8 @@
   # https://daiderd.com/nix-darwin/manual/index.html#opt-users.users._name_.home
   users.users.kobza.home = "/Users/kobza";
 
+  networking.hostName = "akira";
+
   fonts.packages = with pkgs; [ 
     # https://nixos.wiki/wiki/Fonts    
     # Include selected fonts from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
