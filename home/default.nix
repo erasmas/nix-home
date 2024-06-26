@@ -41,6 +41,11 @@
     ];
   };
 
+  programs.wezterm = {
+    enable = true;
+    extraConfig = builtins.readFile ../assets/config/wezterm/wezterm.lua;
+  };
+
   imports = [
     ./assets.nix
     ./git.nix

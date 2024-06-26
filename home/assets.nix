@@ -15,11 +15,6 @@ in
     recursive = true;
   };
 
-  xdg.configFile."wezterm" = {
-    source = "${nixConfigDirectory}/wezterm";
-    recursive = true;
-  };
-
   xdg.configFile."karabiner" = {
     source = "${nixConfigDirectory}/karabiner";
     recursive = true;
