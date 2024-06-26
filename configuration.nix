@@ -39,7 +39,7 @@
 
   networking.hostName = "akira";
 
-  fonts.packages = with pkgs; [ 
+  fonts.packages = with pkgs; [
     # https://nixos.wiki/wiki/Fonts    
     # Include selected fonts from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
     (nerdfonts.override { fonts = [ "Iosevka" "JetBrainsMono" ]; })

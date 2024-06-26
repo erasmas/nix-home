@@ -34,14 +34,14 @@
         # The flake-based setup of the Home Manager `nix-darwin` module
         # https://nix-community.github.io/home-manager/index.html#sec-flakes-nix-darwin-module
         home-manager.darwinModules.home-manager
-          {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.kobza = import ./home;
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.kobza = import ./home;
 
-            # Optionally, use home-manager.extraSpecialArgs to pass
-            # arguments to home.nix
-          }
+          # Optionally, use home-manager.extraSpecialArgs to pass
+          # arguments to home.nix
+        }
       ];
     };
 
