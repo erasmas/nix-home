@@ -12,8 +12,6 @@ and `home-manager`.
     - [3. Build Nix stores](#3-build-nix-stores)
       - [3.1. Backup the existing `nix.conf` file](#31-backup-the-existing-nixconf-file)
     - [4. Switch to the built Nix stores](#4-switch-to-the-built-nix-stores)
-    - [5. Import GPG Keys](#5-import-gpg-keys)
-    - [6. Decrypt secrets](#6-decrypt-secrets)
   - [Updates](#updates)
     - [1. Find the latest stable version of Nix](#1-find-the-latest-stable-version-of-nix)
     - [2. Update flake.lock file](#2-update-flakelock-file)
@@ -88,25 +86,6 @@ install Brew packages defined in this repository.
 
 ```
 chsh -s /etc/profiles/per-user/kobza/bin/fish
-```
-
-### 5. Import GPG Keys
-
-Import GPG Keys from my password manager.
-
-1. Open the GPG Keychain application.
-2. Copy the private key block to the clipboard.
-3. The GPG Keychain will detect the private keys automatically.
-
-### 6. Decrypt secrets
-
-Once `yadm` is installed using the command above, we can use `yadm` to decrypt
-the secrets.
-
-```shell
-yadm clone https://github.com/kobzafathoni/yadm-home.git
-yadm decrypt
-# enter the passphrase (if prompted)
 ```
 
 ## Updates
