@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
   # https://nix-community.github.io/home-manager/index.html#sec-usage-configuration
@@ -51,8 +51,9 @@
     target = ".config/karabiner/karabiner.json";
   };
 
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Dev/nix-home/assets/config/nvim";
+
   imports = [
-    ./assets.nix
     ./git.nix
     ./packages.nix
   ];

@@ -1,7 +1,7 @@
 .PHONY: build switch
 
 build:
-	nix build .#darwinConfigurations.kobza.system --impure
+	nix build .#darwinConfigurations.kobza.system
 
 switch: build
-	nix run nix-darwin -- switch --flake .#kobza --impure
+	nix run nix-darwin -- switch --flake .#kobza
