@@ -18,18 +18,22 @@
   # Let Home Manager install and manage itself.
   # https://nix-community.github.io/home-manager/options.html#opt-programs.home-manager.enable
   programs.home-manager.enable = true;
-  programs.fish.enable = true;
-  programs.fish.plugins = [
-    {
-      name = "fzf.fish";
-      src = pkgs.fetchFromGitHub {
-        owner = "PatrickF1";
-        repo = "fzf.fish";
-        rev = "8920367";
-        sha256 = "T8KYLA/r/gOKvAivKRoeqIwE2pINlxFQtZJHpOy9GMM=";
-      };
-    }
-  ];
+
+  programs.fish = {
+    enable = true;
+    shellInit = builtins.readFile ../assets/config/fish/init.fish;
+    plugins = [
+      {
+        name = "fzf.fish";
+        src = pkgs.fetchFromGitHub {
+          owner = "PatrickF1";
+          repo = "fzf.fish";
+          rev = "8920367";
+          sha256 = "T8KYLA/r/gOKvAivKRoeqIwE2pINlxFQtZJHpOy9GMM=";
+        };
+      }
+    ];
+  };
 
   imports = [
     ./assets.nix
