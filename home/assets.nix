@@ -14,9 +14,4 @@ in
     source = "${nixConfigDirectory}/nvim";
     recursive = true;
   };
-
-  xdg.configFile."karabiner" = {
-    source = "${nixConfigDirectory}/karabiner";
-    recursive = true;
-  };
 }

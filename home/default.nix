@@ -46,6 +46,11 @@
     extraConfig = builtins.readFile ../assets/config/wezterm/wezterm.lua;
   };
 
+  home.file."karabiner" = {
+    source = ../assets/config/karabiner/karabiner.json;
+    target = ".config/karabiner/karabiner.json";
+  };
+
   imports = [
     ./assets.nix
     ./git.nix
