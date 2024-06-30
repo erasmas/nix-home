@@ -27,6 +27,8 @@
     bat
     cachix # to store cache binaries on cachix.org
     coreutils
+    docker
+    docker-compose
     delta
     devenv
     direnv
