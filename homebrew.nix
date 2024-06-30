@@ -32,6 +32,7 @@
     "arc"
     "bambu-studio"
     "karabiner-elements"
+    "mos"
     "raycast"
     "slack"
     "wezterm"
