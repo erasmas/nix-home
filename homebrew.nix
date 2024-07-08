@@ -39,5 +39,6 @@
     "zoom"
     "signal"
     "spotify"
+    "ticktick"
   ];
 }
