@@ -31,6 +31,7 @@
     "1password"
     "arc"
     "bambu-studio"
+    "bruno"
     "karabiner-elements"
     "mos"
     "raycast"
