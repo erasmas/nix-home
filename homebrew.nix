@@ -31,7 +31,6 @@
     "1password"
     "arc"
     "bambu-studio"
-    "bruno"
     "karabiner-elements"
     "mos"
     "raycast"
@@ -39,6 +38,7 @@
     "wezterm"
     "zoom"
     "signal"
+    "steam"
     "spotify"
     "ticktick"
   ];
