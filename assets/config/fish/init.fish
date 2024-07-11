@@ -24,6 +24,11 @@ if not contains /etc/profiles/per-user/$USER/bin $PATH
   set PATH /etc/profiles/per-user/$USER/bin $PATH
 end
 
+# Add asdf binaries if asdf is installed
+if test -d "$HOME/.asdf"
+    set -x PATH $HOME/.asdf/bin $HOME/.asdf/shims $PATH
+end
+
 # ---------------------------------------------------------
 # Aliases
 # ---------------------------------------------------------
