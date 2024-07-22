@@ -42,6 +42,7 @@
     jq
     lazydocker
     lazygit
+    minikube
     neovim
     nix-prefetch-git # to get git signatures for fetchFromGit
     nixpkgs-fmt
