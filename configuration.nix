@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   # Make sure the nix daemon always runs
   # Without this configuration, the switch command won't work due to this error:
@@ -44,5 +44,10 @@
     # Include selected fonts from https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts
     (nerdfonts.override { fonts = [ "Iosevka" "JetBrainsMono" ]; })
   ];
+
+  nixpkgs.config.allowUnfreePredicate = pkg:
+    builtins.elem (lib.getName pkg) [
+      "terraform"
+    ];
 
 }

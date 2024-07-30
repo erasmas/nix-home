@@ -50,6 +50,7 @@
     pgcli
     postgresql
     ripgrep
+    terraform
     tig
     watch
     wget
