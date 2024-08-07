@@ -51,7 +51,10 @@
     target = ".config/karabiner/karabiner.json";
   };
 
-  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Dev/nix-home/assets/config/nvim";
+  home.file."nvim" = {
+    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Dev/neovim-config";
+    target = ".config/nvim";
+  };
 
   imports = [
     ./git.nix
