@@ -59,5 +59,6 @@
   imports = [
     ./git.nix
     ./packages.nix
+    ./helix.nix
   ];
 }

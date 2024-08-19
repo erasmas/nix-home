@@ -26,8 +26,10 @@
     aws-mfa
     awscli2
     bat
+    bun # JavaScript runtime
     cachix # to store cache binaries on cachix.org
     coreutils
+    corepack_22 # to install pnpm
     docker
     docker-compose
     delta

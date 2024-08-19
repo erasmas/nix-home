@@ -41,5 +41,6 @@
     "steam"
     "spotify"
     "ticktick"
+    "vscodium"
   ];
 }
