@@ -20,10 +20,7 @@
   #
   # Commented apps suffer continual update issue:
   # https://github.com/malob/nixpkgs/issues/9
-  homebrew.masApps = {
-    "Xcode" = 497799835;
-  };
-
+  homebrew.masApps = { "Xcode" = 497799835; };
 
   # List of Homebrew casks to install.
   # https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.casks
@@ -31,6 +28,7 @@
     "1password"
     "arc"
     "bambu-studio"
+    "iina" # video player
     "karabiner-elements"
     "mos"
     "raycast"
