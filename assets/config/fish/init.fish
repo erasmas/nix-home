@@ -5,7 +5,7 @@ set -gx KUBECONFIG $HOME/.kube/config
 set -gx TERM xterm-256color
 
 
-set -L TE "nvim"
+set -L TE hx
 set -gx VISUAL $TE
 set -gx EDITOR $TE
 
@@ -17,11 +17,11 @@ set -gx SSH_AUTH_SOCK ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/age
 
 # Add nix to PATH if not already there
 if not contains /nix/var/nix/profiles/default/bin $PATH
-  set PATH /nix/var/nix/profiles/default/bin $PATH
+    set PATH /nix/var/nix/profiles/default/bin $PATH
 end
 
 if not contains /etc/profiles/per-user/$USER/bin $PATH
-  set PATH /etc/profiles/per-user/$USER/bin $PATH
+    set PATH /etc/profiles/per-user/$USER/bin $PATH
 end
 
 # Add asdf binaries if asdf is installed
@@ -46,9 +46,9 @@ alias gco "git checkout"
 alias gcb "git checkout -b"
 
 # Nix
-alias nixre  "darwin-rebuild switch"
-alias nixgc  "nix-collect-garbage -d"
-alias nixq   "nix-env -qaP"
+alias nixre "darwin-rebuild switch"
+alias nixgc "nix-collect-garbage -d"
+alias nixq "nix-env -qaP"
 alias nixcfg "e ~/.nixpkgs/darwin-configuration.nix"
 
 # Docker
@@ -56,8 +56,8 @@ alias dcu "docker-compose up"
 alias dcd "docker-compose down"
 
 ## Work tools
-alias tf "terraform"
-alias k "kubectl"
+alias tf terraform
+alias k kubectl
 alias gw "./gradlew"
 
 ## vi mode
