@@ -37,6 +37,11 @@
         ];
       };
 
+      language-server.terraform-ls = {
+        command = "${pkgs.terraform-ls}/bin/terraform-ls";
+        args = [ "serve" ];
+      };
+
       language = [
         {
           name = "nix";
@@ -56,6 +61,14 @@
           language-servers = [ "typescript-lsp" ];
           formatter = {
             command = "${pkgs.nodePackages.prettier}/bin/prettier";
+          };
+        }
+        {
+          name = "hcl";
+          language-servers = [ "terraform-ls" ];
+          formatter = {
+            command = "${pkgs.terraform}/bin/terraform";
+            args = [ "fmt" "-" ];
           };
         }
       ];
