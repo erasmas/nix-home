@@ -22,8 +22,18 @@
   # https://github.com/malob/nixpkgs/issues/9
   homebrew.masApps = { "Xcode" = 497799835; };
 
-  # List of Homebrew casks to install.
-  # https://daiderd.com/nix-darwin/manual/index.html#opt-homebrew.casks
+  homebrew.onActivation = {
+    # Whether to enable Homebrew to auto-update itself and all formulae during nix-darwin system activation
+    autoUpdate = true;
+    # This uninstalls all formulae not listed in the generated Brewfile, 
+    # and if the formula is a cask, removes all files associated with that cask.
+    cleanup = "zap";
+    # Whether to enable Homebrew to upgrade outdated formulae and Mac App Store apps
+    upgrade = true;
+  };
+
+  # List of Homebrew ";to install.
+  # https://daiderd.comnix-darwin/manual/index.html#opt-homebrew.casks;
   homebrew.casks = [
     "1password"
     "arc"
@@ -31,14 +41,16 @@
     "iina" # video player
     "karabiner-elements"
     "mos"
+    "orbstack"
     "raycast"
-    "slack"
-    "wezterm"
-    "zoom"
     "signal"
-    "steam"
+    "slack"
     "spotify"
+    "steam"
+    "tailscale"
     "ticktick"
     "vscodium"
+    "wezterm"
+    "zoom"
   ];
 }
