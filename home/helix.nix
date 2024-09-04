@@ -9,9 +9,13 @@
         space.space = "file_picker";
         space.w = ":w";
         space.q = ":q";
+
+        # Bind Esc to cancel multi-cursor or selection: 
+        # https://youtu.be/aiSI6vdZWgE?t=130
+        esc = [ "collapse_selection" "keep_primary_selection" ];
       };
 
-      editor.cursor-shape = { insert = "bar"; };
+      editor = { cursor-shape = { insert = "bar"; }; };
     };
 
     languages = {
@@ -42,6 +46,11 @@
         args = [ "serve" ];
       };
 
+      language-server.elixir-ls = {
+        command = "${pkgs.elixir-ls}/bin/elixir-ls";
+        args = [ ];
+      };
+
       language = [
         {
           name = "nix";
@@ -70,6 +79,10 @@
             command = "${pkgs.terraform}/bin/terraform";
             args = [ "fmt" "-" ];
           };
+        }
+        {
+          name = "elixir";
+          language-servers = [ "elixir-ls" ];
         }
       ];
     };

@@ -3,9 +3,7 @@
 {
   # Environment variables to always set at login.
   # https://nix-community.github.io/home-manager/options.html#opt-home.sessionVariables
-  home.sessionVariables = {
-    JAVA_HOME = "${pkgs.jdk21}";
-  };
+  # home.sessionVariables = { JAVA_HOME = "${pkgs.jdk21}"; };
 
   # Extra directories to add to $PATH
   # https://nix-community.github.io/home-manager/options.html#opt-home.sessionPath
@@ -28,13 +26,13 @@
     bat
     bun # JavaScript runtime
     cachix # to store cache binaries on cachix.org
-    coreutils
     corepack_22 # to install pnpm
-    docker
-    docker-compose
+    coreutils
     delta
     devenv
     direnv
+    docker
+    docker-compose
     fd
     fzf
     go
