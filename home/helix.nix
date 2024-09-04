@@ -83,6 +83,11 @@
         {
           name = "elixir";
           language-servers = [ "elixir-ls" ];
+          auto-format = true;
+          formatter = {
+            command = "mix";
+            args = [ "format" "-" ];
+          };
         }
       ];
     };
