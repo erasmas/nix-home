@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   programs.helix = {
@@ -47,7 +47,7 @@
       };
 
       language-server.elixir-ls = {
-        command = "${pkgs.elixir-ls}/bin/elixir-ls";
+        command = "${pkgs-unstable.elixir-ls}/bin/elixir-ls";
         args = [ ];
       };
 
