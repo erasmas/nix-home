@@ -3,6 +3,7 @@
 
   inputs = {
     # Package sets
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
 
     # Environment/system management
@@ -16,7 +17,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, darwin, home-manager }: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, darwin, home-manager }: {
 
     # We need a darwinConfigurations output to actually have a `nix-darwin` configuration.
     # https://github.com/LnL7/nix-darwin#flakes-experimental
@@ -41,12 +42,16 @@
 
           # Optionally, use home-manager.extraSpecialArgs to pass
           # arguments to home.nix
+          home-manager.extraSpecialArgs = {
+            pkgs-unstable = nixpkgs-unstable.legacyPackages.aarch64-darwin;
+          };
         }
       ];
     };
 
     # Set Nix formatter
     # https://nixos.org/manual/nix/unstable/command-ref/new-cli/nix3-fmt#examples
-    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
+    formatter.aarch64-darwin =
+      nixpkgs.legacyPackages.aarch64-darwin.nixpkgs-fmt;
   };
 }

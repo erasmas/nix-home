@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
   # Environment variables to always set at login.
@@ -19,7 +19,7 @@
 
   # The set of packages to appear in the user environment
   # https://nix-community.github.io/home-manager/options.html#opt-home.packages
-  home.packages = with pkgs; [
+  home.packages = (with pkgs; [
     asdf-vm # to manage multiple Python versions
     aws-mfa
     awscli2
@@ -55,5 +55,5 @@
     watch
     wget
     zoxide
-  ];
+  ]) ++ (with pkgs-unstable; [ elixir_1_17 ]);
 }
