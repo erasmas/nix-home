@@ -37,6 +37,7 @@
   homebrew.casks = [
     "1password"
     "arc"
+    "aws-vpn-client"
     "bambu-studio"
     "iina" # video player
     "karabiner-elements"
