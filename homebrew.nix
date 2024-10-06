@@ -41,6 +41,7 @@
     "bambu-studio"
     "iina" # video player
     "karabiner-elements"
+    "krita" # image editor
     "mos"
     "orbstack"
     "raycast"
