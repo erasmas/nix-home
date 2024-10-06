@@ -22,7 +22,6 @@
 
       language-server.pylsp = {
         command = "${pkgs.python312Packages.python-lsp-server}/bin/pylsp";
-        args = [ "--stdio" ];
       };
 
       language-server.nil = {
@@ -35,10 +34,7 @@
       language-server.typescript-lsp = {
         command =
           "${pkgs.nodePackages.typescript-language-server}/bin/typescript-language-server";
-        args = [
-          "--stdio"
-          "--tsserver-path=${pkgs.typescript}/lib/node_modules/typescript/lib"
-        ];
+        args = [ "--stdio" ];
       };
 
       language-server.terraform-ls = {
@@ -59,7 +55,7 @@
         }
         {
           name = "python";
-          language-servers = [ "pyright" ];
+          language-servers = [ "pylsp" "pyright" ];
           formatter = {
             command = "${pkgs.ruff}/bin/ruff";
             args = [ "format" ];
