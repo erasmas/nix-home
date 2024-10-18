@@ -69,6 +69,13 @@
           };
         }
         {
+          name = "tsx";
+          language-servers = [ "typescript-lsp" ];
+          formatter = {
+            command = "${pkgs.nodePackages.prettier}/bin/prettier";
+          };
+        }
+        {
           name = "hcl";
           language-servers = [ "terraform-ls" ];
           formatter = {
