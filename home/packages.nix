@@ -38,11 +38,11 @@
     go
     htop
     httpie
-    jdk21
     jq
     lazydocker
     lazygit
     minikube
+    mycli
     neovim
     nix-prefetch-git # to get git signatures for fetchFromGit
     nixpkgs-fmt
