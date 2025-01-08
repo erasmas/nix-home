@@ -34,10 +34,10 @@
     docker
     docker-compose
     fd
+    ffmpeg
     fzf
+    gh
     go
-    htop
-    httpie
     jq
     lazydocker
     lazygit
@@ -45,6 +45,7 @@
     mycli
     neovim
     nix-prefetch-git # to get git signatures for fetchFromGit
+    nixd
     nixpkgs-fmt
     nodejs_20
     pgcli

@@ -25,23 +25,26 @@
   homebrew.onActivation = {
     # Whether to enable Homebrew to auto-update itself and all formulae during nix-darwin system activation
     autoUpdate = true;
-    # This uninstalls all formulae not listed in the generated Brewfile, 
+    # This uninstalls all formulae not listed in the generated Brewfile,
     # and if the formula is a cask, removes all files associated with that cask.
     cleanup = "zap";
     # Whether to enable Homebrew to upgrade outdated formulae and Mac App Store apps
     upgrade = true;
   };
 
-  # List of Homebrew ";to install.
+  homebrew.brews = [ ];
+
+  # Homebrew casks to install.
   # https://daiderd.comnix-darwin/manual/index.html#opt-homebrew.casks;
   homebrew.casks = [
     "1password"
     "arc"
-    "aws-vpn-client"
     "bambu-studio"
     "iina" # video player
     "karabiner-elements"
+    "kap"
     "krita" # image editor
+    "livebook"
     "mos"
     "orbstack"
     "raycast"
@@ -53,6 +56,8 @@
     "ticktick"
     "vscodium"
     "wezterm"
+    "zed"
+    "zen-browser"
     "zoom"
   ];
 }
