@@ -12,6 +12,7 @@
         light = "One Light";
         dark = "One Dark";
       };
+      tab_bar = { show = false; };
     };
   };
 }

@@ -40,10 +40,11 @@
     "1password"
     "arc"
     "bambu-studio"
-    "iina" # video player
+    # "iina" # video player
+    "intellij-idea"
     "karabiner-elements"
     "kap"
-    "krita" # image editor
+    # "krita" # image editor
     "livebook"
     "mos"
     "orbstack"

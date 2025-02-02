@@ -12,6 +12,7 @@ config.pane_focus_follows_mouse = true
 config.color_scheme = 'Tokyo Night'
 config.font = wezterm.font 'Iosevka Nerd Font Mono'
 config.font_size = 15
+config.window_decorations = "RESIZE"
 
 local act = wezterm.action
 
