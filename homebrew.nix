@@ -40,16 +40,16 @@
     "1password"
     "arc"
     "bambu-studio"
-    # "iina" # video player
+    "iina" # video player
     "intellij-idea"
     "karabiner-elements"
     "kap"
     # "krita" # image editor
     "livebook"
-    "mos"
     "orbstack"
     "raycast"
     "signal"
+    "skim" # pdf reader which supports dark mode
     "slack"
     "spotify"
     "steam"

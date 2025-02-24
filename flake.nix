@@ -4,7 +4,7 @@
   inputs = {
     # Package sets
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
 
     # Environment/system management
     darwin.url = "github:LnL7/nix-darwin";
@@ -12,7 +12,7 @@
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # Home Manager
-    home-manager.url = "github:nix-community/home-manager/release-24.05";
+    home-manager.url = "github:nix-community/home-manager/release-24.11";
     # nix will normally use the nixpkgs defined in home-managers inputs, we only want one copy of nixpkgs though
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
