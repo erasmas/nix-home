@@ -40,6 +40,7 @@
     "1password"
     "arc"
     "bambu-studio"
+    "balenaetcher"
     "iina" # video player
     "intellij-idea"
     "karabiner-elements"

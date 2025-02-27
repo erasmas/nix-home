@@ -41,12 +41,12 @@
     jq
     lazydocker
     lazygit
-    minikube
     mycli
     neovim
     nix-prefetch-git # to get git signatures for fetchFromGit
     nixd
     nixpkgs-fmt
+    nmap
     nodejs_20
     pgcli
     postgresql
