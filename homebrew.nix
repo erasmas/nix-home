@@ -56,7 +56,7 @@
     "steam"
     "tailscale"
     "ticktick"
-    "vscodium"
+    "virtualbox"
     "wezterm"
     "zed"
     "zen-browser"
