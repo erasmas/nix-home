@@ -15,9 +15,12 @@
     home-manager.url = "github:nix-community/home-manager";
     # nix will normally use the nixpkgs defined in home-managers inputs, we only want one copy of nixpkgs though
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+
+    # Helix
+    helix.url = "github:helix-editor/helix/master";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, darwin, home-manager }: {
+  outputs = { nixpkgs, nixpkgs-unstable, darwin, home-manager, helix }: {
 
     # We need a darwinConfigurations output to actually have a `nix-darwin` configuration.
     # https://github.com/LnL7/nix-darwin#flakes-experimental
@@ -44,6 +47,7 @@
           # arguments to home.nix
           home-manager.extraSpecialArgs = {
             pkgs-unstable = nixpkgs-unstable.legacyPackages.aarch64-darwin;
+            helix = helix;
           };
         }
       ];

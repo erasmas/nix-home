@@ -1,8 +1,9 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, pkgs-unstable, helix, ... }:
 
 {
   programs.helix = {
     enable = true;
+    package = helix.packages.${pkgs.system}.default;
 
     settings = {
       keys.normal = {
