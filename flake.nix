@@ -20,7 +20,7 @@
     helix.url = "github:helix-editor/helix/master";
   };
 
-  outputs = { nixpkgs, nixpkgs-unstable, darwin, home-manager, helix }: {
+  outputs = { self, nixpkgs, nixpkgs-unstable, darwin, home-manager, helix }: {
 
     # We need a darwinConfigurations output to actually have a `nix-darwin` configuration.
     # https://github.com/LnL7/nix-darwin#flakes-experimental
