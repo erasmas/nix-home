@@ -39,27 +39,25 @@
   homebrew.casks = [
     "1password"
     "arc"
-    "bambu-studio"
-    "balenaetcher"
+    # "bambu-studio"
+    # "balenaetcher"
     "iina" # video player
     "intellij-idea"
     "karabiner-elements"
     "kap"
     # "krita" # image editor
-    "livebook"
+    # "livebook"
     "orbstack"
     "raycast"
     "signal"
     "skim" # pdf reader which supports dark mode
     "slack"
     "spotify"
-    "steam"
+    # "steam"
     "tailscale"
-    "ticktick"
     "virtualbox"
     "wezterm"
     "zed"
-    "zen-browser"
     "zoom"
   ];
 }
