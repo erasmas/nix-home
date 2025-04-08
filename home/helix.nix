@@ -10,6 +10,9 @@
         space.space = "file_picker";
         space.w = ":w";
         space.q = ":q";
+        space.g.b = ":echo %sh{git blame -L %{cursor_line},+1 %{buffer_name}}";
+        space.g.y =
+          ":sh git_url %{buffer_name} %{cursor_line} %{cursor_line} | pbcopy";
 
         # Bind Esc to cancel multi-cursor or selection: 
         # https://youtu.be/aiSI6vdZWgE?t=130

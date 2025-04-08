@@ -24,21 +24,15 @@
 
     shellInit = builtins.readFile ../assets/config/fish/init.fish;
 
-    functions = {
-      songwhip = builtins.readFile ../assets/config/fish/functions/songwhip.fish;
-    };
-
-    plugins = [
-      {
-        name = "fzf.fish";
-        src = pkgs.fetchFromGitHub {
-          owner = "PatrickF1";
-          repo = "fzf.fish";
-          rev = "8920367";
-          sha256 = "T8KYLA/r/gOKvAivKRoeqIwE2pINlxFQtZJHpOy9GMM=";
-        };
-      }
-    ];
+    plugins = [{
+      name = "fzf.fish";
+      src = pkgs.fetchFromGitHub {
+        owner = "PatrickF1";
+        repo = "fzf.fish";
+        rev = "8920367";
+        sha256 = "T8KYLA/r/gOKvAivKRoeqIwE2pINlxFQtZJHpOy9GMM=";
+      };
+    }];
   };
 
   programs.wezterm = {
@@ -52,13 +46,10 @@
   };
 
   home.file."nvim" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Dev/neovim-config";
+    source = config.lib.file.mkOutOfStoreSymlink
+      "${config.home.homeDirectory}/Dev/neovim-config";
     target = ".config/nvim";
   };
 
-  imports = [
-    ./git.nix
-    ./packages.nix
-    ./helix.nix
-  ];
+  imports = [ ./git.nix ./packages.nix ./helix.nix ];
 }

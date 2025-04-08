@@ -20,6 +20,9 @@
   # The set of packages to appear in the user environment
   # https://nix-community.github.io/home-manager/options.html#opt-home.packages
   home.packages = (with pkgs; [
+    # git_url used by Helix
+    (pkgs.writeScriptBin "git_url"
+      (builtins.readFile ../assets/scripts/git_url))
     ansible
     asdf-vm # to manage multiple Python versions
     aws-mfa

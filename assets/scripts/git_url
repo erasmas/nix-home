@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+
+file_path="$1"
+start_line="$2"
+end_line="$3"
+
+# Get the GitHub repository URL
+repo_url=$(git config --get remote.origin.url | sed 's/\.git$//' | sed 's|git@github.com:|https://github.com/|')
+
+# Get the current branch
+branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Get the relative path from the git root
+relative_path=$(git ls-files --full-name "$file_path")
+
+# Construct the GitHub URL
+if [ "$start_line" = "$end_line" ]; then
+    echo "$repo_url/blob/$branch/$relative_path#L$start_line"
+else
+    echo "$repo_url/blob/$branch/$relative_path#L$start_line-L$end_line"
+fi
