@@ -48,7 +48,9 @@
     # "krita" # image editor
     # "livebook"
     "orbstack"
+    "postman"
     "raycast"
+    "redis-insight"
     "signal"
     "skim" # pdf reader which supports dark mode
     "slack"
