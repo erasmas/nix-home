@@ -4,7 +4,6 @@ set -gx KUBECONFIG $HOME/.kube/config
 
 set -gx TERM xterm-256color
 
-
 set -L TE hx
 set -gx VISUAL $TE
 set -gx EDITOR $TE
@@ -29,6 +28,9 @@ if test -d "$HOME/.asdf"
     set -x PATH $HOME/.asdf/bin $HOME/.asdf/shims $PATH
 end
 
+if test -f "$HOME/.config/fish/env.fish"
+    source "$HOME/.config/fish/env.fish"
+end
 # ---------------------------------------------------------
 # Aliases
 # ---------------------------------------------------------
@@ -82,7 +84,6 @@ direnv hook fish | source
 
 ## zoxide integration
 zoxide init fish --cmd g | source
-
 
 ## Prompt
 
