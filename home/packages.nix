@@ -23,6 +23,8 @@
     # git_url used by Helix
     (pkgs.writeScriptBin "git_url"
       (builtins.readFile ../assets/scripts/git_url))
+    (pkgs.writeScriptBin "grammar"
+      (builtins.readFile ../assets/scripts/grammar))
     ansible
     asdf-vm # to manage multiple Python versions
     aws-mfa
@@ -57,6 +59,7 @@
     ripgrep
     terraform
     tig
+    uv
     watch
     wget
     zoxide

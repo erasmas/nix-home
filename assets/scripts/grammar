@@ -1,0 +1,69 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.9"
+# dependencies = [
+#     "anthropic",
+# ]
+# ///
+import os
+import sys
+import anthropic
+import difflib
+
+def highlight_diff(old, new):
+    RED = '\x1b[31m'
+    GREEN = '\x1b[32m'
+    RESET = '\x1b[0m'
+    
+    result = []
+    matcher = difflib.SequenceMatcher(None, old, new)
+    
+    for op, i1, i2, j1, j2 in matcher.get_opcodes():
+        if op == 'equal':
+            result.append(new[j1:j2])
+        # elif op == 'delete':
+            # result.append(f"{RED}{old[i1:i2]}{RESET}")
+        elif op == 'insert' or op == 'replace':
+            result.append(f"{GREEN}{new[j1:j2]}{RESET}")
+            
+    return ''.join(result)
+
+def check_grammar(text):
+    client = anthropic.Anthropic()
+    
+    try:
+        message = client.messages.create(
+        model="claude-3-7-sonnet-20250219",
+            max_tokens=1024,
+            messages=[
+                {
+                    "role": "user",
+                    "content": f"Please fix any grammar and spelling errors in this text. Only respond with the corrected text, nothing else: {text}"
+                }
+            ]
+        )
+        
+        corrected_text = message.content[0].text
+        print(highlight_diff(text, corrected_text))
+        
+            
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+def main():
+    # Check if API key is set
+    if "ANTHROPIC_API_KEY" not in os.environ:
+        print("Error: ANTHROPIC_API_KEY environment variable is not set", file=sys.stderr)
+        print("Please set it using: export ANTHROPIC_API_KEY=your-api-key", file=sys.stderr)
+        sys.exit(1)
+    
+    # Check if input text is provided
+    if len(sys.argv) != 2:
+        print(f"Usage: {sys.argv[0]} \"text to check\"", file=sys.stderr)
+        sys.exit(1)
+    
+    check_grammar(sys.argv[1])
+
+if __name__ == "__main__":
+    main()
