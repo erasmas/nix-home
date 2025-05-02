@@ -45,6 +45,7 @@
     "intellij-idea"
     "karabiner-elements"
     "kap"
+    "multipass"
     # "krita" # image editor
     # "livebook"
     "orbstack"
@@ -52,12 +53,12 @@
     "raycast"
     "redis-insight"
     "signal"
-    "skim" # pdf reader which supports dark mode
+    # "skim" # pdf reader which supports dark mode
     "slack"
     "spotify"
     # "steam"
     "tailscale"
-    "virtualbox"
+    # "virtualbox"
     "wezterm"
     "zed"
     "zoom"
