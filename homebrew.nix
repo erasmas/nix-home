@@ -45,11 +45,9 @@
     "intellij-idea"
     "karabiner-elements"
     "kap"
-    "multipass"
     # "krita" # image editor
     # "livebook"
     "orbstack"
-    "postman"
     "raycast"
     "redis-insight"
     "signal"
@@ -58,8 +56,9 @@
     "spotify"
     # "steam"
     "tailscale"
-    # "virtualbox"
+    # "utm"
     "wezterm"
+    "yaak"
     "zed"
     "zoom"
   ];

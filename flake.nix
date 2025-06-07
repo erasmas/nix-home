@@ -39,6 +39,7 @@
         # https://nix-community.github.io/home-manager/index.html#sec-flakes-nix-darwin-module
         home-manager.darwinModules.home-manager
         {
+          system.primaryUser = "kobza";
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.kobza = import ./home;
