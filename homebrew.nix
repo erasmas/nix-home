@@ -41,6 +41,7 @@
     "arc"
     # "bambu-studio"
     # "balenaetcher"
+    "clearvpn"
     "iina" # video player
     "intellij-idea"
     "karabiner-elements"
