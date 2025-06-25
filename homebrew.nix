@@ -32,7 +32,7 @@
     upgrade = true;
   };
 
-  homebrew.brews = [ "nvm" ];
+  homebrew.brews = [ "node@22" ];
 
   # Homebrew casks to install.
   # https://daiderd.comnix-darwin/manual/index.html#opt-homebrew.casks;
@@ -60,7 +60,6 @@
     "steam"
     "tailscale"
     "tor-browser"
-    # "utm"
     "wezterm"
     "winbox"
     "yaak"
