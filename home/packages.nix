@@ -53,7 +53,6 @@
     nixd
     nixpkgs-fmt
     nmap
-    nodejs_20
     pgcli
     postgresql
     ripgrep

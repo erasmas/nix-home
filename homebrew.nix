@@ -32,7 +32,7 @@
     upgrade = true;
   };
 
-  homebrew.brews = [ ];
+  homebrew.brews = [ "nvm" ];
 
   # Homebrew casks to install.
   # https://daiderd.comnix-darwin/manual/index.html#opt-homebrew.casks;
@@ -42,12 +42,14 @@
     # "bambu-studio"
     # "balenaetcher"
     "clearvpn"
+    "element"
     "iina" # video player
     "intellij-idea"
     "karabiner-elements"
     "kap"
     # "krita" # image editor
-    # "livebook"
+    "libreoffice"
+    "livebook"
     "orbstack"
     "raycast"
     "redis-insight"
@@ -55,10 +57,12 @@
     # "skim" # pdf reader which supports dark mode
     "slack"
     "spotify"
-    # "steam"
+    "steam"
     "tailscale"
+    "tor-browser"
     # "utm"
     "wezterm"
+    "winbox"
     "yaak"
     "zed"
     "zoom"
