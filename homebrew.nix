@@ -57,9 +57,9 @@
     # "skim" # pdf reader which supports dark mode
     "slack"
     "spotify"
-    "steam"
     "tailscale"
     "tor-browser"
+    "vscodium"
     "wezterm"
     "winbox"
     "yaak"
