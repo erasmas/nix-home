@@ -49,6 +49,7 @@
       language-server.elixir-ls = {
         command = "${pkgs-unstable.elixir-ls}/bin/elixir-ls";
         args = [ ];
+        environment = { SHELL = "${pkgs.bash}/bin/bash"; };
       };
 
       language = [

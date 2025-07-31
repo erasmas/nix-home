@@ -62,5 +62,5 @@
     watch
     wget
     zoxide
-  ]) ++ (with pkgs-unstable; [ elixir_1_17 ]);
+  ]) ++ (with pkgs-unstable; [ elixir_1_18 elixir-ls ]);
 }
